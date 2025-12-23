@@ -1,3 +1,6 @@
 FROM n8nio/n8n:latest
-EXPOSE 5678
-CMD ["n8n"]
+
+ENV N8N_PORT=$PORT
+
+CMD ["sh", "-c", "node /usr/local/bin/n8n"]
+
